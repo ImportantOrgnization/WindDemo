@@ -171,7 +171,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 76bcc9f4a402c344d814f2dd75b37a82, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -555,10 +555,10 @@ MonoBehaviour:
   m_JitterHighFrequency: 21
   m_WindRT: {fileID: 1313355543}
   m_Material: {fileID: 1397441804}
-  uvs: {x: 0, y: -0.032583117}
-  uvs1: {x: 0, y: -0.08419588}
-  uvs2: {x: 0, y: -0.20056418}
-  uvs3: {x: 0, y: -0.019029636}
+  uvs: {x: 0, y: -0.2696066}
+  uvs1: {x: 0, y: -0.69667244}
+  uvs2: {x: 0, y: -0.6595533}
+  uvs3: {x: 0, y: -0.1574594}
   m_Trans: {fileID: 1698869561}
   m_WindZone: {fileID: 1698869559}
   m_MainWind: 1

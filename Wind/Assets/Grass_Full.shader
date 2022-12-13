@@ -1,10 +1,13 @@
-﻿Shader "DLDL/GrassExperimental/GrassExperimental"
+﻿Shader "DLDL/GrassExperimental/Grass_Full"
 {
     Properties
     {
         _Cutoff("Cutoff", Range(0, 1)) = 0.5
         _Color("Color", Color) = (1,1,1,1)
         _MainTex ("MainTex", 2D) = "white" {}
+        _SmoothnessStrength("SmoothnessStrength", Float) = 1.0
+        _TranslucencyStrength("TranslucencyStrength", Float) = 1.0
+        _TranslucencyPower("TranslucencyPower", Float) = 6.0
 
         [Space(5)]
         _WindMultiplier("Strength Main (X) Jitter (Y)", Vector) = (1, 0.5, 0, 0)
@@ -49,12 +52,18 @@
 
           
             sampler2D _MainTex; float4 _MainTex_ST;
+           // sampler2D _WindRT; 
 
             CBUFFER_START(UnityPerMaterial)
             half4 _Color;
             half _Cutoff;
+            half _TranslucencyStrength;
+            half _TranslucencyPower;
+            half _SmoothnessStrength;
             half2 _WindMultiplier;
             CBUFFER_END
+
+          
 
             Varyings GrassVert(Attributes input)
             {
